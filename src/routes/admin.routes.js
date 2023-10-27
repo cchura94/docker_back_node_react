@@ -13,4 +13,5 @@ Route.get("/", function(req, res){
     return res.status(200).json({"message": "Web Service (API Rest)"});
 })
 
-module.exports = Route
+// module.exports = Route
+export default Route;

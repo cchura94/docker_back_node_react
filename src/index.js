@@ -5,12 +5,15 @@ import express from "express"
 
 require('dotenv').config()
 
-import { RouteAuth } from "./routes/auth.routes";
-const RouteAdmin = require("./routes/admin.routes");
+import RouteAuth from "./routes/auth.routes";
+import RouteAdmin from "./routes/admin.routes";
 
 // inicializando
 const app = express()
 const http = require('http').Server(app)
+
+// habilitar req.body
+app.use(express.json());
 
 // variables
 const PORT = process.env.PORT || 3000
