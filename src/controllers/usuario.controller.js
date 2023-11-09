@@ -24,7 +24,7 @@ module.exports = {
       if (user.id) {
         return res.status(201).json({ message: "Usuario Registrado" });
       }
-      return res.status(200).json(datos);
+      return res.status(422).json({error: true, message: "Error al registrar el usuario"});
     } catch (error) {
       return res.status(422).json(error.message);
     }

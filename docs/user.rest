@@ -1,5 +1,5 @@
 GET http://127.0.0.1:3000/api/v1/admin/usuario
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqdWFuQG1haWwuY29tIiwidGltZSI6IjIwMjMtMTEtMDhUMDA6NTk6NTUuNDk5WiIsImlhdCI6MTY5OTQwNTE5NSwiZXhwIjoxNjk5NDA4Nzk1fQ.8sPh7gSSMXpI9LVJu8Ru6kStgaHBtqlrTg4VM7nSANc
 ### guardar
 POST http://127.0.0.1:3000/api/v1/admin/usuario
 Content-Type: application/json
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### mostrar
-GET http://127.0.0.1:3000/api/v1/admin/usuario/2
+GET http://127.0.0.1:3000/api/v1/admin/usuario/3
 
 ### modificar
 PUT http://127.0.0.1:3000/api/v1/admin/usuario/2

@@ -25,7 +25,7 @@ export default {
                 time: new Date()
             }
 
-            const token = jwt.sign(payload, "MI_CODIGO_SECRETO", {
+            const token = jwt.sign(payload, process.env.JWT_SECRET, {
                 expiresIn: 60*60
             });
 

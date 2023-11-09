@@ -2,6 +2,7 @@
 // es6 a es5 (transpilar) // npm run build
 // const express = require("express")
 import express from "express"
+import cors from 'cors'
 
 require('dotenv').config()
 
@@ -11,6 +12,7 @@ import RouteAdmin from "./routes/admin.routes";
 // inicializando
 const app = express()
 const http = require('http').Server(app)
+app.use(cors())
 
 // habilitar req.body
 app.use(express.json());
