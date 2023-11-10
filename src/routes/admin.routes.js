@@ -5,11 +5,12 @@ import categoriaController from "../controllers/categoria.controller";
 import productoController from "../controllers/producto.controller";
 import authMiddleware from "../middlewares/auth.middleware";
 
+import { usuarioCheck } from "../helpers/validators"
 
 const Route = Router()
 
 Route.get("/usuario", authMiddleware, usuarioController.funListar); // listar
-Route.post("/usuario", authMiddleware, usuarioController.funGuardar); // guardar
+Route.post("/usuario", authMiddleware, usuarioCheck(), usuarioController.funGuardar); // guardar
 Route.get("/usuario/:id", authMiddleware,usuarioController.funMostrar); // mostrar
 Route.put("/usuario/:id", authMiddleware, usuarioController.funModificar); // modificar
 Route.delete("/usuario/:id", authMiddleware, usuarioController.funEliminar); // modificar

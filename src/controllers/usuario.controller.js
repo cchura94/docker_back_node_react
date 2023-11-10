@@ -1,3 +1,4 @@
+import { validationResult } from "express-validator";
 import models from "./../models/index";
 
 import bcrypt from 'bcrypt'
@@ -5,8 +6,16 @@ import bcrypt from 'bcrypt'
 module.exports = {
   async funListar(req, res) {
     try {
-      const usuarios = await models.User.findAll({
+
+      const page = parseInt(req.query.page);
+      const limit = parseInt(req.query.limit);
+
+      const offset = (page-1) * limit
+
+      const usuarios = await models.User.findAndCountAll({
         attributes: ["id", "username", "email"],
+        offset: offset,
+        limit: limit
       });
 
       return res.status(200).json(usuarios);
@@ -16,6 +25,12 @@ module.exports = {
   },
   async funGuardar(req, res) {
     try {
+      let errors = validationResult(req);
+      if(!errors.isEmpty()){
+        console.log(errors);
+        return res.status(422).json({errors: errors.array()})
+      }
+      
       let datos = req.body;
       datos.password = await bcrypt.hash(datos.password, 12);
 
