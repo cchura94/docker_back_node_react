@@ -1,0 +1,3 @@
+GET http://127.0.0.1:3000/api/v1/admin/pedido?page=1&limit=5&q=''
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqdWFuQG1haWwuY29tIiwidGltZSI6IjIwMjMtMTEtMjhUMDA6NTk6MzMuMjUyWiIsImlhdCI6MTcwMTEzMzE3MywiZXhwIjoxNzAxMTM2NzczfQ.GPvG9eRr-WHn_-TWKBLk_PTru3bJzoWg5zjSMddC6RY

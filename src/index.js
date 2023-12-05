@@ -14,6 +14,9 @@ const app = express()
 const http = require('http').Server(app)
 app.use(cors())
 
+// carga de archivos estaticos
+app.use(express.static('public'));
+
 // habilitar req.body
 app.use(express.json());
 

@@ -3,12 +3,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiO
 ### guardar
 POST http://127.0.0.1:3000/api/v1/admin/usuario
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqdWFuQG1haWwuY29tIiwidGltZSI6IjIwMjMtMTEtMTBUMDE6MDA6MDIuODIyWiIsImlhdCI6MTY5OTU3ODAwMiwiZXhwIjoxNjk5NTgxNjAyfQ.GZihR5OvyX5eeXpIxC7uWRCEf3iKayMRKgxM7HW3pkA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqdWFuQG1haWwuY29tIiwidGltZSI6IjIwMjMtMTEtMTRUMDA6Mjk6MjkuMDQ0WiIsImlhdCI6MTY5OTkyMTc2OSwiZXhwIjoxNjk5OTI1MzY5fQ.YWhbY3gvIwDbl_9s6buQtfsCJjeneE4s_MZnJwUOSoA
 
 {
-    "username": "juan",
-    "email": "juan@mail.com",
-    "password": "juan54321"
+    "username": "maria",
+    "email": "maria@mail.com",
+    "password": "maria54321"
 }
 
 ### mostrar
