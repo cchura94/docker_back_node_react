@@ -11,7 +11,7 @@ export default {
       const offset = (page - 1) * limit;
 
       const pedidos = await models.Pedido.findAndCountAll({
-        include: [models.Cliente],
+        include: [models.Cliente, models.Producto],
         offset: offset,
         limit: limit,
       });

@@ -3,6 +3,7 @@
 // const express = require("express")
 import express from "express"
 import cors from 'cors'
+import morgan from 'morgan'
 
 require('dotenv').config()
 
@@ -14,6 +15,7 @@ const app = express()
 const http = require('http').Server(app)
 app.use(cors())
 
+app.use(morgan('dev'))
 // carga de archivos estaticos
 app.use(express.static('public'));
 
