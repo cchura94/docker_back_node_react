@@ -31,5 +31,5 @@ app.use("/api/v1/auth", RouteAuth)
 
 // levantar el servidor
 http.listen(PORT, () => {
-    console.log(`Servidor iniciado en http://127.0.0.1:${PORT}`)
+    console.log(`Servidor iniciado en: http://127.0.0.1:${PORT}`)
 })

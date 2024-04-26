@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  proynode:
+    container_name: proynode
+    build: .
+    env_file:
+      - ./.env
+    ports:
+      - "$PORT:$PORT"
+    environment:
+      - PORT=$PORT
+    depends_on:
+      - bd_mysql
+
+  bd_mysql:
+    container_name: bd_mysql
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+    volumes:
+      - ./data:/var/lib/mysql
+
+  webserver:
+    container_name: webserver
+    image: nginx:1.25.5-alpine
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "89:80"
+      - "443:443"
+    volumes:
+      - web-root:/var/www/html
+    depends_on:
+      - proynode
+
+#  certbot:
+volumes:
+  web-root:
