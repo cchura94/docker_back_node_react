@@ -28,8 +28,8 @@ services:
       context: ./nginx
       dockerfile: Dockerfile
     ports:
-      - "89:80"
-      - "443:443"
+      - "80:80"
+    #  - "443:443"
     volumes:
       - web-root:/var/www/html
     depends_on:
