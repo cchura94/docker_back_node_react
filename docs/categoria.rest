@@ -1,1 +1,13 @@
-GET http://127.0.0.1:3000/api/v1/admin/categoria
+GET http://3.91.54.159:3000/api/v1/admin/categoria
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI0LTA1LTAxVDAyOjMyOjUwLjIwN1oiLCJpYXQiOjE3MTQ1MzA3NzAsImV4cCI6MTcxNDUzNDM3MH0.9Hyc4SrKa_cBVJIwmtbOipAMdXU2qDcN1pAtUFarGnk
+
+
+### crear categoria
+POST http://3.91.54.159:3000/api/v1/admin/categoria
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI0LTA1LTAxVDAyOjMyOjUwLjIwN1oiLCJpYXQiOjE3MTQ1MzA3NzAsImV4cCI6MTcxNDUzNDM3MH0.9Hyc4SrKa_cBVJIwmtbOipAMdXU2qDcN1pAtUFarGnk
+Content-Type: application/json
+
+{
+    "nombre": "ELECTRONICOS",
+    "detalle": "equipos de computación"
+}
