@@ -32,9 +32,25 @@ services:
     #  - "443:443"
     volumes:
       - web-root:/var/www/html
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/etc/lib/letsencrypt
     depends_on:
       - proynode
+  
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/etc/lib/letsencrypt
+      - web-root:/var/www/html
+    command: certonly --webroot --webroot-path=/var/www/html --email alfredoguillenpinto@gmail.com --agree-tos -d apinode.curso-docker.store
+    depends_on:
+      - webserver
+    
 
 #  certbot:
 volumes:
   web-root:
+  certbot-etc:
+  certbot-var:
